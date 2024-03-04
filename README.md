@@ -11,7 +11,7 @@ Quizy is a geography game, in which the playe has to guess the regions of a coun
 
 ## Usage
 From the repository's directory, run the following command:
-- `python3 main.py`
+`python3 main.py`
 
 ## Game Structure
 Quizy is iniatially structured in three phases:
