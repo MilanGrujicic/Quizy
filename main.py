@@ -22,7 +22,7 @@ canvas.create_image(200, 120, image=logo)
 # BUTTONS
 b_start = Button(text='Start Game', width=10)
 b_start.grid(row=1, column=0, padx= 125, pady=5)
-b_options = Button(text='Option', width=10, command=open_options)
+b_options = Button(text='Options', width=10, command=open_options)
 b_options.grid(row=2, column=0, pady=5)
 b_exit = Button(text='Exit', width=10, command=root.destroy)
 b_exit.grid(row=3, column=0, pady=5)
