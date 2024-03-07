@@ -1,11 +1,21 @@
 from tkinter import *
+# from playsound import playsound
 
-# BUTTON FUNCTIONS
 def open_options():
     options = Toplevel(root)
     options.title("Quizy - Options")
     options.config(bg="#27262e")
     options.geometry("360x225")
+    # playsound("button_sound.mp3")
+
+def start_game():
+    new_window = Tk()
+    new_window.title("New Window")
+    root.destroy()
+    new_window.config(bg="#27262e")
+    new_window.geometry("360x450")
+
+    new_window.mainloop()
 
 # MAIN WINDOWN SETUP
 root = Tk()
@@ -20,7 +30,7 @@ logo = PhotoImage(file="quizy.png")
 canvas.create_image(200, 120, image=logo)
 
 # BUTTONS
-b_start = Button(text='Start Game', width=10)
+b_start = Button(text='Start Game', width=10, command=start_game)
 b_start.grid(row=1, column=0, padx= 125, pady=5)
 b_options = Button(text='Options', width=10, command=open_options)
 b_options.grid(row=2, column=0, pady=5)
