@@ -9,12 +9,19 @@ def open_options():
     # playsound("button_sound.mp3")
 
 def start_game():
-    new_window = Tk()
-    new_window.title("New Window")
-    root.destroy()
+    new_window = Toplevel(root)
+    new_window.title("Pick a country")
     new_window.config(bg="#27262e")
     new_window.geometry("360x450")
-
+    brazil_flag = PhotoImage(file="Brazil/bra_flag.png")
+    slovenia_flag = PhotoImage(file="Slovenia/slo_flag.png")
+    china_flag = PhotoImage(file="China/chinese_flag.png")
+    b_level_1 = Button(new_window, image=brazil_flag,  width=50)
+    b_level_1.grid(row=0, column=0, padx=125, pady=5)
+    b_level_2 = Button(new_window, image=slovenia_flag, width=50)
+    b_level_2.grid(row=1, column=0, padx=125, pady=5)
+    b_level_3 = Button(new_window, image=china_flag, width=50)
+    b_level_3.grid(row=2, column=0, padx=125, pady=5)
     new_window.mainloop()
 
 # MAIN WINDOWN SETUP
