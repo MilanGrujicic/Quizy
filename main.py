@@ -1,4 +1,5 @@
 from tkinter import *
+import subprocess
 # from playsound import playsound
 
 def open_options():
@@ -13,16 +14,20 @@ def start_game():
     new_window.title("Pick a country")
     new_window.config(bg="#27262e")
     new_window.geometry("360x450")
-    brazil_flag = PhotoImage(file="Brazil/bra_flag.png")
+    brazil_flag = PhotoImage(file="bra_flag.png")
     slovenia_flag = PhotoImage(file="Slovenia/slo_flag.png")
     china_flag = PhotoImage(file="China/chinese_flag.png")
-    b_level_1 = Button(new_window, text="Brazil", image=brazil_flag, compound="top", padx=14)
+    b_level_1 = Button(new_window, text="Brazil", image=brazil_flag, compound="top", padx=14, command=start_brazil_map)
     b_level_1.grid(row=0, column=0, padx=125, pady=5)
     b_level_2 = Button(new_window, text="Slovenia", image=slovenia_flag, compound="top")
     b_level_2.grid(row=1, column=0, padx=125, pady=5)
     b_level_3 = Button(new_window, text="China", image=china_flag, compound="top", padx=14)
     b_level_3.grid(row=2, column=0, padx=125, pady=5)
     new_window.mainloop()
+
+def start_brazil_map():
+    file_to_run = "brazil.py"
+    subprocess.run(["python3", file_to_run])
 
 # MAIN WINDOWN SETUP
 root = Tk()
