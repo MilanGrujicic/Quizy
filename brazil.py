@@ -6,7 +6,7 @@ states = data["state"].to_list()
 
 screen = turtle.Screen()
 screen.title("Brazil States Game")
-screen.bgcolor("#27262e")
+screen.bgcolor("#39dbff")
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
