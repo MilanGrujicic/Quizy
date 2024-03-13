@@ -19,7 +19,7 @@ def start_game():
     china_flag = PhotoImage(file="China/chinese_flag.png")
     b_level_1 = Button(new_window, text="Brazil", image=brazil_flag, compound="top", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2",command=start_brazil_map)
     b_level_1.grid(row=0, column=0, padx=125, pady=5)
-    b_level_2 = Button(new_window, text="Slovenia", image=slovenia_flag, compound="top", bg="#fff500", highlightbackground = "black", bd=100, border="2",)
+    b_level_2 = Button(new_window, text="Slovenia", image=slovenia_flag, compound="top", bg="#fff500", highlightbackground = "black", bd=100, border="2", command=start_slovenia_map)
     b_level_2.grid(row=1, column=0, padx=125, pady=5)
     b_level_3 = Button(new_window, text="China", image=china_flag, compound="top", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2",)
     b_level_3.grid(row=2, column=0, padx=125, pady=5)
@@ -27,6 +27,10 @@ def start_game():
 
 def start_brazil_map():
     file_to_run = "brazil.py"
+    subprocess.run(["python3", file_to_run])
+
+def start_slovenia_map():
+    file_to_run = "slovenia.py"
     subprocess.run(["python3", file_to_run])
 
 # MAIN WINDOWN SETUP
