@@ -1,16 +1,17 @@
 import turtle
 import pandas
 
-data = pandas.read_csv("states.csv")
+data = pandas.read_csv("Data/brazilian_states.csv")
 states = data["state"].to_list()
 
 screen = turtle.Screen()
 screen.title("Brazil States Game")
 screen.bgcolor("#39dbff")
-image = "blank_states_img.gif"
+image = "Maps/brazil_blank_states.gif"
 screen.addshape(image)
 turtle.shape(image)
-guessed_states = []
+guessed_states = set()
+missing_states = []
 
 while len(guessed_states) < 27:
     answer_state = screen.textinput(
@@ -18,14 +19,13 @@ while len(guessed_states) < 27:
     ).title()
 
     if answer_state == "Exit":
-        missing_states = []
         for state in states:
             if state not in guessed_states:
                 missing_states.append(state)
         break
 
     if answer_state in states:
-        guessed_states.append(answer_state)
+        guessed_states.add(answer_state)
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()

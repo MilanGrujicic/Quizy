@@ -1,16 +1,17 @@
 import turtle
 import pandas
 
-data = pandas.read_csv("regions.csv")
+data = pandas.read_csv("Data/slovenian_regions.csv")
 regions = data["regions"].to_list()
 
 screen = turtle.Screen()
 screen.setup(width=550, height=350)
 screen.title("Slovenian Regions Game")
-image = "blank_regions_img.gif"
+image = "Maps/slovenia_blank_regions.gif"
 screen.addshape(image)
 turtle.shape(image)
-guessed_regions = []
+guessed_regions = set()
+missing_regions = []
 
 while len(guessed_regions) < 12:
     answer_region = screen.textinput(
@@ -18,14 +19,13 @@ while len(guessed_regions) < 12:
     ).title()
 
     if answer_region == "Exit":
-        missing_regions = []
         for region in regions:
             if region not in guessed_regions:
                 missing_regions.append(region)
         break
 
     if answer_region in regions:
-        guessed_regions.append(answer_region)
+        guessed_regions.add(answer_region)
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
