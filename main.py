@@ -23,6 +23,8 @@ def start_game():
     b_level_2.grid(row=1, column=0, padx=125, pady=5)
     b_level_3 = Button(new_window, text="China", image=china_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=start_china_map)
     b_level_3.grid(row=2, column=0, padx=125, pady=5)
+    b_exit = Button(new_window, text="Exit", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=new_window.destroy)
+    b_exit.grid(row=3, column=0, padx=125, pady=25)
     new_window.mainloop()
 
 def start_brazil_map():
