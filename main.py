@@ -1,42 +1,35 @@
 from tkinter import *
 import subprocess
-# from playsound import playsound
 
 def open_options():
-    options = Toplevel(root)
-    options.title("Quizy - Options")
-    options.config(bg="#39dbff")
-    options.geometry("360x225")
-    # playsound("button_sound.mp3")
+    options_dialog = Toplevel(root)
+    options_dialog.title("Quizy - Options")
+    options_dialog.config(bg="#39dbff")
+    options_dialog.geometry("360x225")
 
 def start_game():
-    new_window = Toplevel(root)
-    new_window.title("Pick a country")
-    new_window.config(bg="#39dbff")
-    new_window.geometry("360x450")
+    start_game_window = Toplevel(root)
+    start_game_window.title("Pick a country")
+    start_game_window.config(bg="#39dbff")
+    start_game_window.geometry("360x450")
+
     brazil_flag = PhotoImage(file="Flags/bra_flag.png")
     slovenia_flag = PhotoImage(file="Flags/slo_flag.png")
     china_flag = PhotoImage(file="Flags/chinese_flag.png")
-    b_level_1 = Button(new_window, text="Brazil", image=brazil_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2",command=start_brazil_map)
+    
+    b_level_1 = Button(start_game_window, text="Brazil", image=brazil_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2",command=lambda: start_chosen_map("brazil"))
     b_level_1.grid(row=0, column=0, padx=125, pady=5)
-    b_level_2 = Button(new_window, text="Slovenia", image=slovenia_flag, compound="top", padx=27, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=start_slovenia_map)
+    b_level_2 = Button(start_game_window, text="Slovenia", image=slovenia_flag, compound="top", padx=27, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: start_chosen_map("slovenia"))
     b_level_2.grid(row=1, column=0, padx=125, pady=5)
-    b_level_3 = Button(new_window, text="China", image=china_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=start_china_map)
+    b_level_3 = Button(start_game_window, text="China", image=china_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: start_chosen_map("china"))
     b_level_3.grid(row=2, column=0, padx=125, pady=5)
-    b_exit = Button(new_window, text="Exit", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=new_window.destroy)
+    b_exit = Button(start_game_window, text="Back", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=start_game_window.destroy)
     b_exit.grid(row=3, column=0, padx=125, pady=25)
-    new_window.mainloop()
+    
+    start_game_window.mainloop()
 
-def start_brazil_map():
-    file_to_run = "brazil.py"
-    subprocess.run(["python3", file_to_run])
-
-def start_slovenia_map():
-    file_to_run = "slovenia.py"
-    subprocess.run(["python3", file_to_run])
-
-def start_china_map():
-    file_to_run = "china.py"
+def start_chosen_map(country):
+    file_to_run = f"{country}.py"
     subprocess.run(["python3", file_to_run])
 
 # MAIN WINDOWN SETUP
