@@ -1,6 +1,7 @@
 # QUIZY
 ## Description
-Quizy is a geography game, in which the playe has to guess the regions of a country it picks.
+Quizy is a geography game. 
+Quizy challenges players to guess the regions of a specific country.
 
 ## Getting Started
 ### Prerequisites
