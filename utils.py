@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import subprocess
 
 def open_options():
@@ -32,5 +33,9 @@ def start_game():
     start_game_window.mainloop()
 
 def start_chosen_map(country):
+    open_instructions()
     file_to_run = f"{country}.py"
     subprocess.run(["python3", file_to_run])
+
+def open_instructions():
+    messagebox.showinfo(title="Instructions", message="Here the instructions will be added.")
