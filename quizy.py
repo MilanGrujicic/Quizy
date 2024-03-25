@@ -27,3 +27,28 @@ class Quizy:
         l_creator.grid(row=4, column=0, sticky="SW", pady=40)
 
         self.window.mainloop()
+
+class start_game(Quizy):
+    def __init__(self):
+        self.start_game_window = Toplevel()
+        self.start_game_window.title("Pick a country")
+        self.start_game_window.config(bg="#39dbff")
+        self.start_game_window.geometry("360x450")
+
+        brazilian_flag = PhotoImage(file="Flags/bra_flag.png")
+        slovenian_flag = PhotoImage(file="Flags/slo_flag.png")
+        chinese_flag = PhotoImage(file="Flags/chinese_flag.png")
+
+        self.label_pick_a_country = Label(self.start_game_window, text="Pick A Country", font=("Arial", 15, "bold"), fg='black', bg="#39dbff")
+        self.label_pick_a_country.grid(row=0, column=0)
+
+        self.button_level_1 = Button(self.start_game_window, text="Brazil", image=brazilian_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2",command=lambda: utils.start_chosen_map("brazil", "states"))
+        self.button_level_1.grid(row=1, column=0, padx=125, pady=5)
+        self.button_level_2 = Button(self.start_game_window, text="Slovenia", image=slovenian_flag, compound="top", padx=27, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: utils.start_chosen_map("slovenia", "regions"))
+        self.button_level_2.grid(row=2, column=0, padx=125, pady=5)
+        self.button_level_3 = Button(self.start_game_window, text="China", image=chinese_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: utils.start_chosen_map("china", "provinces"))
+        self.button_level_3.grid(row=3, column=0, padx=125, pady=5)
+        self.button_exit = Button(self.start_game_window, text="Back", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=self.start_game_window.destroy)
+        self.button_exit.grid(row=4, column=0, padx=125, pady=25)
+
+        self.start_game_window.mainloop()
