@@ -1,7 +1,7 @@
 import turtle
 import pandas
 
-data = pandas.read_csv("Data/chinese_provinces_by_china.csv")
+data = pandas.read_csv("Data/chinese_provinces_by_western_countries.csv")
 provinces = data["provinces"].to_list()
 
 screen = turtle.Screen()
@@ -16,9 +16,9 @@ missing_provinces = list()
 # def get_mouse_click_coor(x, y):
 #     print(x, y)
 
-while len(guessed_provinces) < 29:
+while len(guessed_provinces) < 28:
     answer_province = screen.textinput(
-        f"{len(guessed_provinces)}/29 completed", prompt="What's another province's name?"
+        f"{len(guessed_provinces)}/28 completed", prompt="What's another province's name?"
     ).title()
 
     if answer_province == "Exit":
