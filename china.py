@@ -16,9 +16,9 @@ missing_provinces = list()
 # def get_mouse_click_coor(x, y):
 #     print(x, y)
 
-while len(guessed_provinces) < 20:
+while len(guessed_provinces) < 28:
     answer_province = screen.textinput(
-        f"{len(guessed_provinces)}/20 completed", prompt="What's another province's name?"
+        f"{len(guessed_provinces)}/28 completed", prompt="What's another province's name?"
     ).title()
 
     if answer_province == "Exit":
