@@ -46,30 +46,10 @@ class start_game(Quizy):
         self.button_level_1.grid(row=1, column=0, padx=125, pady=5)
         self.button_level_2 = Button(self.start_game_window, text="Slovenia", image=slovenian_flag, compound="top", padx=27, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: utils.start_chosen_map("slovenia", "regions"))
         self.button_level_2.grid(row=2, column=0, padx=125, pady=5)
-        self.button_level_3 = Button(self.start_game_window, text="China", image=chinese_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: utils.start_chosen_map("china", "provinces"))
+        self.button_level_3 = Button(self.start_game_window, text="China", image=chinese_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command= utils.open_chinese_map)
         self.button_level_3.grid(row=3, column=0, padx=125, pady=5)
         self.button_exit = Button(self.start_game_window, text="Back", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=self.start_game_window.destroy)
         self.button_exit.grid(row=4, column=0, padx=125, pady=25)
 
         self.start_game_window.mainloop()
 
-class chinese_map(start_game):
-    def __init__(self):
-        self.chinese_map = Toplevel()
-        self.chinese_map.title("Pick an option")
-        self.chinese_map.config(bg="#39dbff")
-        self.chinese_map.geometry("450x150")
-
-        self.pick_an_option = Label(self.chinese_map, text="Pick which map you want to play", font=("Arial", 15, "bold"), fg='black', bg="#39dbff")
-        self.pick_an_option.grid(row=0, column=0, padx=25, pady=25)
-
-        self.button_frame = Frame(self.chinese_map, bg="#39dbff")
-        self.button_frame.grid(row=1,column=0)
-
-        self.chinese_map_by_china = Button(self.button_frame, text="Chinese Map By China", bg="#fff500", highlightbackground = "black", bd=100, border="2")
-        self.chinese_map_by_china.pack(side=LEFT, padx=5)
-
-        self.chinese_map_by_western_countries = Button(self.button_frame, text="Chinese Map By Western Countries", bg="#fff500", highlightbackground = "black", bd=100, border="2")
-        self.chinese_map_by_western_countries.pack(side=RIGHT, padx=5)
-
-        self.chinese_map.mainloop()
