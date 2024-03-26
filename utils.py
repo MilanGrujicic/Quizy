@@ -16,6 +16,8 @@ def start_game():
 
 def start_chosen_map(country, division):
     '''From start game screen, opens the country map picked by the user.'''
+    if country == "china":
+        chinese_map = quizy.chinese_map()
     open_instructions(country, division)
     file_to_run = f"{country}.py"
     subprocess.run(["python3", file_to_run])
