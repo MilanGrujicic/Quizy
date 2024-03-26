@@ -52,3 +52,24 @@ class start_game(Quizy):
         self.button_exit.grid(row=4, column=0, padx=125, pady=25)
 
         self.start_game_window.mainloop()
+
+class chinese_map(start_game):
+    def __init__(self):
+        self.chinese_map = Toplevel()
+        self.chinese_map.title("Pick an option")
+        self.chinese_map.config(bg="#39dbff")
+        self.chinese_map.geometry("450x150")
+
+        self.pick_an_option = Label(self.chinese_map, text="Pick which map you want to play", font=("Arial", 15, "bold"), fg='black', bg="#39dbff")
+        self.pick_an_option.grid(row=0, column=0, padx=25, pady=25)
+
+        self.button_frame = Frame(self.chinese_map, bg="#39dbff")
+        self.button_frame.grid(row=1,column=0)
+
+        self.chinese_map_by_china = Button(self.button_frame, text="Chinese Map By China", bg="#fff500", highlightbackground = "black", bd=100, border="2")
+        self.chinese_map_by_china.pack(side=LEFT, padx=5)
+
+        self.chinese_map_by_western_countries = Button(self.button_frame, text="Chinese Map By Western Countries", bg="#fff500", highlightbackground = "black", bd=100, border="2")
+        self.chinese_map_by_western_countries.pack(side=RIGHT, padx=5)
+
+        self.chinese_map.mainloop()
