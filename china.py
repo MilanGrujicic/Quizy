@@ -13,9 +13,6 @@ turtle.shape(image)
 guessed_provinces = set()
 missing_provinces = list()
 
-# def get_mouse_click_coor(x, y):
-#     print(x, y)
-
 while len(guessed_provinces) < 29:
     answer_province = screen.textinput(
         f"{len(guessed_provinces)}/29 completed", prompt="What's another province's name?"
@@ -35,9 +32,6 @@ while len(guessed_provinces) < 29:
         province_data = data[data.provinces == answer_province]
         t.goto(int(province_data.x), int(province_data.y))
         t.write(answer_province)
-    
-    # turtle.onscreenclick(get_mouse_click_coor)
-    # turtle.mainloop()
 
 df = pandas.DataFrame(missing_provinces)
 df.to_csv("answer.csv")
