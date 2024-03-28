@@ -26,17 +26,11 @@ def open_chinese_map():
     button_frame = Frame(chinese_map, bg="#39dbff")
     button_frame.grid(row=1,column=0)
 
-    chinese_map_by_china = Button(button_frame, text="Chinese Map By China", bg="#fff500", highlightbackground = "black", bd=100, border="2", command=open_chinese_map_by_china)
+    chinese_map_by_china = Button(button_frame, text="Chinese Map By China", bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: start_chosen_map("china", "provinces"))
     chinese_map_by_china.pack(side=LEFT, padx=5)
 
-    chinese_map_by_western_countries = Button(button_frame, text="Chinese Map By Western Countries", bg="#fff500", highlightbackground = "black", bd=100, border="2", command=open_chinese_map_by_western_countries)
+    chinese_map_by_western_countries = Button(button_frame, text="Chinese Map By Western Countries", bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: start_chosen_map("china_by_western_countries", "provinces"))
     chinese_map_by_western_countries.pack(side=RIGHT, padx=5)
-
-def open_chinese_map_by_china():
-    start_chosen_map("china", "provinces")
-
-def open_chinese_map_by_western_countries():
-    start_chosen_map("china_by_western_countries", "provinces")
 
 def start_chosen_map(country, division):
     '''From start game screen, opens the country map picked by the user.'''
