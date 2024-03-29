@@ -3,13 +3,6 @@ from tkinter import messagebox
 import subprocess
 import quizy
 
-def open_options():
-    '''From initial screen, opens Options dialog.'''
-    options_dialog = Toplevel()
-    options_dialog.title("Quizy - Options")
-    options_dialog.config(bg="#39dbff")
-    options_dialog.geometry("360x225")
-
 def start_game():
     '''From initial screen, opens start game screen.'''
     start_game_screen = quizy.start_game()
