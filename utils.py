@@ -8,6 +8,7 @@ def start_game():
     start_game_screen = quizy.start_game()
 
 def open_chinese_map():
+    '''Once China is picked, display a new window with two buttons.'''
     chinese_map = Toplevel()
     chinese_map.title("Pick an option")
     chinese_map.config(bg="#39dbff")
