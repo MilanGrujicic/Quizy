@@ -12,7 +12,7 @@ def open_chinese_map():
     chinese_map = Toplevel()
     chinese_map.title("Pick an option")
     chinese_map.config(bg="#39dbff")
-    chinese_map.geometry("450x150")
+    chinese_map.geometry("455x150")
 
     pick_an_option = Label(chinese_map, text="Pick which map you want to play", font=("Arial", 15, "bold"), fg='black', bg="#39dbff")
     pick_an_option.grid(row=0, column=0, padx=25, pady=25)
