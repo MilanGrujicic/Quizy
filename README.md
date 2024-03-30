@@ -16,9 +16,9 @@ From the repository's directory, run the following command:
 
 ## Game Structure
 Quizy is iniatially structured in three phases:
-    - Brazil and its states;
-    - Slovenia and its regions;
-    - China and its provinces;
+- 🇧🇷 Brazil and its states;
+- 🇸🇮 Slovenia and its regions;
+- 🇨🇳 China and its provinces;
 
 Each phase displays a map and an input window where the user has to insert the name of the states/regions/provinces. The game checks if the user input matches with a state/region/province name and add to it in the map.
 
