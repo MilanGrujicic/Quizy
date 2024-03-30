@@ -29,7 +29,7 @@ def open_chinese_map():
 def start_chosen_map(country, division):
     '''From start game screen, opens the country map picked by the user.'''
     open_instructions(country, division)
-    file_to_run = f"{country}.py"
+    file_to_run = f"Countries/{country}.py"
     subprocess.run(["python3", file_to_run])
 
 def open_instructions(contry, division):
