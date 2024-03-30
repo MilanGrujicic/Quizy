@@ -11,7 +11,7 @@ class Quizy:
         # LOGO
         canvas = Canvas(self.window, bg="#39dbff", highlightthickness=0)
         canvas.grid(row=0, column=0)
-        logo = PhotoImage(file="quizyneo.png")
+        logo = PhotoImage(file="logo.png")
         canvas.create_image(200, 120, image=logo)
 
         # BUTTONS
