@@ -42,10 +42,13 @@ class start_game(Quizy):
 
         self.brazilian_map = Button(self.start_game_window, text="Brazil", image=brazilian_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2",command=lambda: utils.start_chosen_map("brazil", "states"))
         self.brazilian_map.grid(row=1, column=0, padx=125, pady=5)
+        
         self.slovenian_map = Button(self.start_game_window, text="Slovenia", image=slovenian_flag, compound="top", padx=27, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=lambda: utils.start_chosen_map("slovenia", "regions"))
         self.slovenian_map.grid(row=2, column=0, padx=125, pady=5)
+        
         self.chinese_map = Button(self.start_game_window, text="China", image=chinese_flag, compound="top", padx=30, bg="#fff500", highlightbackground = "black", bd=100, border="2", command= utils.open_chinese_map)
         self.chinese_map.grid(row=3, column=0, padx=125, pady=5)
+        
         self.button_exit = Button(self.start_game_window, text="Back", width=10, compound="left", padx=14, bg="#fff500", highlightbackground = "black", bd=100, border="2", command=self.start_game_window.destroy)
         self.button_exit.grid(row=4, column=0, padx=125, pady=25)
 
