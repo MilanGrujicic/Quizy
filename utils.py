@@ -4,7 +4,7 @@ import subprocess
 import quizy
 
 def start_game():
-    '''From initial screen, opens start game screen.'''
+    '''From initial screen, open start game screen.'''
     start_game_screen = quizy.start_game()
 
 def open_chinese_map():
