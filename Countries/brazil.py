@@ -1,3 +1,4 @@
+from tkinter import messagebox
 import turtle
 import pandas
 
@@ -33,5 +34,8 @@ while len(guessed_states) < 27:
         t.goto(int(state_data.x), int(state_data.y))
         t.write(answer_state)
 
-df = pandas.DataFrame(missing_states)
-df.to_csv("answer.csv")
+if len(guessed_states) == 27:
+    messagebox.showinfo(title="You Won!", message=f"Congratulations, you guessed all 27 states correctly.")
+else:
+    df = pandas.DataFrame(missing_states)
+    df.to_csv("answers.csv")
