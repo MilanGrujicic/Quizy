@@ -1,3 +1,4 @@
+from tkinter import messagebox
 import turtle
 import pandas
 
@@ -33,8 +34,11 @@ while len(guessed_regions) < 12:
         t.goto(int(region_data.x), int(region_data.y))
         t.write(answer_region)
 
-df = pandas.DataFrame(missing_regions)
-df.to_csv("answers.csv")
+if len(guessed_regions) == 12:
+    messagebox.showinfo(title="You Won!", message=f"Congratulations, you guessed all 12 regions correctly.")
+else:
+    df = pandas.DataFrame(missing_regions)
+    df.to_csv("answers.csv")
 
 """
 Get x y coordinates on click

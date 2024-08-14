@@ -53,4 +53,3 @@ class start_game(Quizy):
         self.button_exit.grid(row=4, column=0, padx=125, pady=25)
 
         self.start_game_window.mainloop()
-
