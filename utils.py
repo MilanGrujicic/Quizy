@@ -1,7 +1,9 @@
+import subprocess
 from tkinter import *
 from tkinter import messagebox
-import subprocess
+
 import quizy
+
 
 def start_game():
     '''From initial screen, open start game screen.'''

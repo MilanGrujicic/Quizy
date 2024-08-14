@@ -1,5 +1,6 @@
-from tkinter import messagebox
 import turtle
+from tkinter import messagebox
+
 import pandas
 
 data = pandas.read_csv("Data/chinese_provinces_by_western_countries.csv")

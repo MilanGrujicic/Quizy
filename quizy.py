@@ -1,5 +1,7 @@
 from tkinter import *
+
 import utils
+
 
 class Quizy:
     def __init__(self):
