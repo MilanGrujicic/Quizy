@@ -26,4 +26,4 @@ Each phase displays a map and an input window where the user has to insert the n
 If you would like to contribute to this humble project, please fork the repository and open a pull request.
 
 ## Acknowledgments
-I would like to thank the Dr. Angela Yu for making the course 100 Days of Code, from which I got the starting point of this project.
+I would like to thank Dr. Angela Yu for making the course 100 Days of Code, from which I got the starting point of this project.
