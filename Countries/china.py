@@ -1,3 +1,4 @@
+from tkinter import messagebox
 import turtle
 import pandas
 
@@ -33,5 +34,8 @@ while len(guessed_provinces) < 29:
         t.goto(int(province_data.x), int(province_data.y))
         t.write(answer_province)
 
-df = pandas.DataFrame(missing_provinces)
-df.to_csv("answer.csv")
+if len(guessed_provinces) == 29:
+    messagebox.showinfo(title="You Won!", message=f"Congratulations, you guessed all 29 provinces correctly.")
+else:
+    df = pandas.DataFrame(missing_provinces)
+    df.to_csv("answers.csv")
