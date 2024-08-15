@@ -5,6 +5,10 @@ from tkinter import messagebox
 import quizy
 
 
+def main():
+    '''Generates the primary class for the whole game.'''
+    quiz = quizy.Quizy()
+
 def start_game():
     '''From initial screen, open start game screen.'''
     start_game_screen = quizy.start_game()

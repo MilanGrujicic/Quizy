@@ -1,3 +1,3 @@
-import quizy
+from utils import main
 
-quiz = quizy.Quizy()
+main()
