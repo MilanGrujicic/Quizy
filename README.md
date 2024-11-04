@@ -1,4 +1,6 @@
 # QUIZY
+![Image Alt Text](./Logos/quizy_logo_black_background.png)
+
 ## Description
 Quizy is a geography game. 
 Quizy challenges players to guess the regions of a specific country.
@@ -15,7 +17,7 @@ From the repository's directory, run the following command:
 `python3 main.py`
 
 ## Game Structure
-Quizy is iniatially structured in three phases:
+Quizy is initially structured in three phases:
 - 🇧🇷 Brazil and its states;
 - 🇸🇮 Slovenia and its regions;
 - 🇨🇳 China and its provinces;
